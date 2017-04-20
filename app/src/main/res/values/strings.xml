@@ -9,4 +9,7 @@
     <string name="date2"><u>March 28</u>, <u>2017</u></string>
     <string name="nr1"><u>1</u></string>
     <string name="nr2"><u>2</u></string>
+    <string name="repo_name_owner">%1$s (%2$s)</string>
+    <string name="public_checkbox">public</string>
+    <string name="number">1</string>
 </resources>
