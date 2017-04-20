@@ -79,6 +79,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 Toast.makeText(this, "Don't have any blog, srry :)",
                         Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.btn_repositories:
+                startActivity(new Intent(this, RepositoryActivity.class));
+                break;
         }
     }
 
@@ -125,12 +128,18 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         mName.setText(profile.getName());
         mOrganization.setText(profile.getCompany());
         mBio.setText(profile.getBio());
-        setTextUnderlined(mLocation, profile.getLocation());
-        setTextUnderlined(mEmail, profile.getEmail());
-        setTextUnderlined(mCreated, profile.getCreatedAt());
-        setTextUnderlined(mUpdated, profile.getUpdatedAt());
-        setTextUnderlined(mPublicRepos, profile.getPublicRepos().toString());
-        setTextUnderlined(mPrivateRepos, profile.getTotalPrivateRepos().toString());
+        mLocation.setText(profile.getLocation());
+        //setTextUnderlined(mLocation, profile.getLocation());
+        //setTextUnderlined(mEmail, profile.getEmail());
+        mEmail.setText(profile.getEmail());
+        //setTextUnderlined(mCreated, profile.getCreatedAt());
+        mCreated.setText(profile.getCreatedAt());
+        //setTextUnderlined(mUpdated, profile.getUpdatedAt());
+        mUpdated.setText(profile.getUpdatedAt());
+        //setTextUnderlined(mPublicRepos, profile.getPublicRepos().toString());
+        mPrivateRepos.setText(profile.getPublicRepos().toString());
+        //setTextUnderlined(mPrivateRepos, profile.getTotalPrivateRepos().toString());
+        mPrivateRepos.setText(profile.getTotalPrivateRepos().toString());
     }
 
     /**
